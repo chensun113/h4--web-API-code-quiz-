@@ -15,19 +15,42 @@
   top: 8px;
   right: 60px;
  }
+h1 {text-align: center;;
+
+}
 </style>
+
 </head>
-<body style ="font-family: Arial;">
+<body style ="font-family: Arial, Helvetica, sans-serif;">
 
-<!-- <h1></h1> -->
+
 <div class ="top01">View Highscores </div>
- <div class ="top02">Timer</div>
- <h1>Coding Quiz Challenge</h1>
+<div class ="top02">Timer <span id="count"></span></div>
+<br>
+<br>
+<br>
+<br>
+<h1>Coding Quiz Challenge</h1>
 
+<div class ="main">
 <p> Try to answer the following code-related question within the time
     <br>limit. Keep in mind that incorrect answers will penalize your scoretime
   <br> by $ seconds!
 </p>
+</div>
+
+<script>
+
+   var n;
+   for (n=75;n>=1;n--){
+    n--;
+    document.getElementById("count").textContent = n;
+   }
+   
+   
+
+
+</script>
 
 </body>
 </html>
