@@ -19,8 +19,8 @@
 .main{
     text-align:center;
 }
-.main002{
- max-width: 600px;
+.main002,.main003,.main004{
+ max-width: 650px;
   margin: auto;
   background: white;
   padding: 10px;
@@ -45,8 +45,6 @@ button{
 <br>
 <br>
 <br>
-
-
 <div class ="main" id ="main01">
     <h1>Coding Quiz Challenge</h1>
     <p id="center">Try to answer the following code-related question within the time
@@ -58,20 +56,30 @@ button{
   </p>
 </div>
 
-
 <div class ="main002" id ="main02">
 <h1>Commonly used data types DO NOT
 <span>Include:</span></h1>
-
     <button onclick="second()" >1.strings</button>
     <p><button onclick="second()" >2.booleans</button></p>
     <p><button onclick="second()" >3.alerts</button></p> 
     <p><button onclick="second()" >4.numbers</button></p>
-    
-
 </div>
 
+<div class ="main003" id ="main03">
+<h1>The condition in an if / else statement is enclosed within ____.</h1>
+<button onclick = "third()">1.quotes</button>
+<p><button onclick = "third()" >2.curly brackets</button></p>
+<p><button onclick = "third()">3.parentheses</button></p> 
+<p><button onclick = "third()" >4.square brackets</button></p>
+</div>
 
+<div class ="main004" id ="main04">
+    <h1>Arrays in JavaScript can be used to store ____.</h1>
+    <button  onclick ="four()" >1.numbers and strings</button>
+    <p><button onclick ="four()" >2.other arrays</button></p>
+    <p><button onclick ="four()">3.booleans</button></p> 
+    <p><button onclick ="four()" >4.all of the above</button></p>
+    </div>
 
 
 
@@ -81,12 +89,35 @@ button{
 function start(){
 var begin =  document.getElementById("main01");
 var second = document.getElementById("main02");
+
 if (begin.style.display= "block"&&(second.style.display ="none")){
     begin.style.display ="none";
     second.style.display= "block";
 
+    }
+//first question page
 }
+
+function second(){
+var second = document.getElementById("main02");
+var third = document.getElementById("main03");
+if (second.style.display= "block"&&(third.style.display ="none")){
+    second.style.display ="none";
+    third.style.display= "block";
+
+   }
 }
+
+function third(){
+var third = document.getElementById("main03");
+var four= document.getElementById("main04");
+if (third.style.display= "block"&&(four.style.display ="none")){
+    third.style.display ="none";
+    four.style.display= "block";
+
+   }
+}
+   
    
    
 
