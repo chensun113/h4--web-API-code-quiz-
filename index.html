@@ -7,7 +7,7 @@
  position: absolute;
   top: 8px;
   left: 16px;
-  color:purple;
+  color:rebeccapurple;
   font-family: Arial;
     }
 .top02{
@@ -17,6 +17,16 @@
  }
 h1 {text-align: center;;
 
+}
+.main{
+    text-align:center;
+}
+button{
+    background-color: rebeccapurple;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    
 }
 </style>
 
@@ -32,16 +42,22 @@ h1 {text-align: center;;
 <br>
 <h1>Coding Quiz Challenge</h1>
 
-<div class ="main">
-<p id="center" style="text-align:center;">Try to answer the following code-related question within the time
+<div class ="main" id ="main01">
+    <p id="center">Try to answer the following code-related question within the time
     <br>limit. Keep in mind that incorrect answers will penalize your scoretime
   <br> by $ seconds!
-</p>
+  <div>
+  <button onclick="start()" >Start Quiz</button>
+</div>
+  </p>
+  
 </div>
 
 <script>
 
-
+function start(){
+var begin =  document.getElementById("main01");
+}
    
    
 
