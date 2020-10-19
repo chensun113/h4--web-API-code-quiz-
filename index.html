@@ -15,11 +15,13 @@
   top: 8px;
   right: 60px;
  }
-h1 {text-align: center;;
 
-}
 .main{
     text-align:center;
+}
+.main002{
+    text-align:center;
+    display:none;
 }
 button{
     background-color: rebeccapurple;
@@ -40,28 +42,40 @@ button{
 <br>
 <br>
 <br>
-<h1>Coding Quiz Challenge</h1>
+
 
 <div class ="main" id ="main01">
+    <h1>Coding Quiz Challenge</h1>
     <p id="center">Try to answer the following code-related question within the time
     <br>limit. Keep in mind that incorrect answers will penalize your scoretime
   <br> by $ seconds!
   <div>
   <button onclick="start()" >Start Quiz</button>
-</div>
+  </div>
   </p>
-  
 </div>
+
+
+<div class ="main002" id ="main02">
+<h1>Commonly used data types DO NOT
+<span>Include:</span></h1>
+
+</div>
+
+
+
 
 <script>
-
+//the first page start quiz button;
 function start(){
 var begin =  document.getElementById("main01");
-if (begin.style.display= "block"){
+var second = document.getElementById("main02");
+if (begin.style.display= "block"&&(second.style.display ="none")){
     begin.style.display ="none";
+    second.style.display= "block";
+
 }
 }
-   
    
    
 
