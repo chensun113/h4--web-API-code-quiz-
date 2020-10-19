@@ -19,8 +19,8 @@
 .main{
     text-align:center;
 }
-.main002,.main003,.main004{
- max-width: 650px;
+.main002,.main003,.main004,.main005{
+ max-width: 680px;
   margin: auto;
   background: white;
   padding: 10px;
@@ -79,7 +79,15 @@ button{
     <p><button onclick ="four()" >2.other arrays</button></p>
     <p><button onclick ="four()">3.booleans</button></p> 
     <p><button onclick ="four()" >4.all of the above</button></p>
-    </div>
+ </div>
+
+<div class ="main005" id ="main05">
+        <h1>Strings values must be enclosed within ____ when being assigned to variables.</h1>
+        <button  onclick ="five()" >1.commas</button>
+        <p><button onclick ="five()" >2.curly brackets</button></p>
+        <p><button onclick ="five()">3.quotes</button></p> 
+        <p><button onclick ="five()" >4.parentheses</button></p>
+</div>
 
 
 
@@ -114,6 +122,16 @@ var four= document.getElementById("main04");
 if (third.style.display= "block"&&(four.style.display ="none")){
     third.style.display ="none";
     four.style.display= "block";
+
+   }
+}
+
+function four(){
+var four = document.getElementById("main04");
+var five= document.getElementById("main05");
+if (four.style.display= "block"&&(five.style.display ="none")){
+    four.style.display ="none";
+    five.style.display= "block";
 
    }
 }
