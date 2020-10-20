@@ -109,8 +109,8 @@ button{
 <div class ="ad001" id = "ad01">
     <h1>All Done!</h1>
     <p>Your final score is </p>
-    <p>Enter initials: <input type ="text" id ="in" >   <button onclick ="submit()">Submit</button>  </p>
-   
+    <p>Enter initials: <input type ="text" id ="in" >   <button onclick ="submit()">Submit</button>                    </p>
+  
 </div>
 
 <div class ="correct" id ="correct">
@@ -124,9 +124,9 @@ button{
 
 <div class ="high" id ="high01">
 <h1>Highscores</h1>
-<p class="purple" id ="p"style ="width: 680px; height:20px; background-color:#ccccff;"></p>
+<div class="purple" id ="p"style ="width: 680px; height:20px; background-color:#ccccff;"> </div>
 <p><button onclick ="back()">Go Back</button>
-    <button class ="btn1" onclick ="clear()">Clear Highscores</button>
+    <button onclick ="cclear()">Clear Highscores</button>
 </p>
 
 </div>
@@ -309,11 +309,17 @@ if (high.style.display ="block"&&(begin.style.display="none")){
 }
 }
 
-function clear(){
-  
+function cclear(){
+    var p=  document.getElementById("p");
+    if (p.style.display="block"){
+        p.style.display="none";
+    }
+   
+
+  }
 
 
-   }
+   
    
    
 
