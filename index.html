@@ -19,8 +19,16 @@
 .main{
     text-align:center;
 }
-.main002,.main003,.main004,.main005{
+.main002,.main003,.main004,.main005,.main006,.ad001{
  max-width: 680px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+  display: none;
+}
+.worng,.correct{
+ color:gray;
+  max-width: 680px;
   margin: auto;
   background: white;
   padding: 10px;
@@ -61,14 +69,14 @@ button{
 <span>Include:</span></h1>
     <button onclick="second()" >1.strings</button>
     <p><button onclick="second()" >2.booleans</button></p>
-    <p><button onclick="second()" >3.alerts</button></p> 
+    <p><button onclick="second01()" >3.alerts</button></p> 
     <p><button onclick="second()" >4.numbers</button></p>
 </div>
 
 <div class ="main003" id ="main03">
 <h1>The condition in an if / else statement is enclosed within ____.</h1>
 <button onclick = "third()">1.quotes</button>
-<p><button onclick = "third()" >2.curly brackets</button></p>
+<p><button onclick = "third01()" >2.curly brackets</button></p>
 <p><button onclick = "third()">3.parentheses</button></p> 
 <p><button onclick = "third()" >4.square brackets</button></p>
 </div>
@@ -78,15 +86,37 @@ button{
     <button  onclick ="four()" >1.numbers and strings</button>
     <p><button onclick ="four()" >2.other arrays</button></p>
     <p><button onclick ="four()">3.booleans</button></p> 
-    <p><button onclick ="four()" >4.all of the above</button></p>
+    <p><button onclick ="four01()" >4.all of the above</button></p>
  </div>
 
 <div class ="main005" id ="main05">
         <h1>Strings values must be enclosed within ____ when being assigned to variables.</h1>
         <button  onclick ="five()" >1.commas</button>
         <p><button onclick ="five()" >2.curly brackets</button></p>
-        <p><button onclick ="five()">3.quotes</button></p> 
+        <p><button onclick ="five01()">3.quotes</button></p> 
         <p><button onclick ="five()" >4.parentheses</button></p>
+</div>
+
+<div class ="main006" id ="main06">
+    <h1>A very useful tool used during development and debugging for printing content to the debugger is:</h1>
+    <button  onclick ="six()" >1.JavaScript</button>
+    <p><button onclick ="six()" >2.terminal/bash</button></p>
+    <p><button onclick ="six()">3.for loops</button></p> 
+    <p><button onclick ="six01()" >4.console log</button></p>
+</div>
+
+<div class ="correct" id ="correct">
+<hr>
+<p>Correct!</p>
+</div>
+<div class ="worng" id ="worng">
+<hr>
+<p>Wrong!</p>
+</div>
+
+
+<div class ="ad001" id = "ad01">
+<h1>All Done!</h1>
 </div>
 
 
@@ -109,30 +139,137 @@ if (begin.style.display= "block"&&(second.style.display ="none")){
 function second(){
 var second = document.getElementById("main02");
 var third = document.getElementById("main03");
+var w = document.getElementById("worng");
 if (second.style.display= "block"&&(third.style.display ="none")){
     second.style.display ="none";
     third.style.display= "block";
+    w.style.display="block";
+   
+   } 
+   
 
-   }
-}
+} 
+function second01(){
+var second = document.getElementById("main02");
+var third = document.getElementById("main03");
+var c = document.getElementById("correct");
+var w = document.getElementById("worng");
+if (second.style.display= "block"&&(third.style.display ="none")){
+    second.style.display ="none";
+    third.style.display= "block";
+    c.style.display="block";
+    w.style.display ="none";
+   } 
+   
+
+} 
 
 function third(){
 var third = document.getElementById("main03");
 var four= document.getElementById("main04");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
 if (third.style.display= "block"&&(four.style.display ="none")){
     third.style.display ="none";
     four.style.display= "block";
-
+    w.style.display="block";
+    c.style.display="none";
    }
 }
+
+function third01(){
+var third = document.getElementById("main03");
+var four = document.getElementById("main04");
+var c = document.getElementById("correct");
+var w = document.getElementById("worng");
+if (third.style.display= "block"&&(four.style.display ="none")){
+    third.style.display ="none";
+    four.style.display= "block";
+    c.style.display="block";
+    w.style.display="none";
+   } 
+   
+
+} 
+
 
 function four(){
 var four = document.getElementById("main04");
 var five= document.getElementById("main05");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
 if (four.style.display= "block"&&(five.style.display ="none")){
     four.style.display ="none";
     five.style.display= "block";
+    w.style.display="block";
+    c.style.display="none";
+   }
+}
 
+function four01(){
+var four = document.getElementById("main04");
+var five= document.getElementById("main05");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+if (four.style.display= "block"&&(five.style.display ="none")){
+    four.style.display ="none";
+    five.style.display= "block";
+    w.style.display="none";
+    c.style.display="block";
+   }
+}
+
+
+
+function five(){
+var five = document.getElementById("main05");
+var six= document.getElementById("main06");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+if (five.style.display= "block"&&(six.style.display ="none")){
+    five.style.display ="none";
+    six.style.display= "block";
+    w.style.display="block";
+    c.style.display="none";
+   }
+}
+
+function five01(){
+var five = document.getElementById("main05");
+var six= document.getElementById("main06");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+if (five.style.display= "block"&&(six.style.display ="none")){
+    five.style.display ="none";
+    six.style.display= "block";
+    w.style.display="none";
+    c.style.display="block";
+   }
+}
+
+function six(){
+var six= document.getElementById("main06");
+var ad= document.getElementById("ad01");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+if (six.style.display= "block"&&(ad.style.display ="none")){
+    six.style.display ="none";
+    ad.style.display= "block";
+    w.style.display="none";
+    c.style.display="none";
+   }
+}
+
+function six01(){
+var six= document.getElementById("main06");
+var ad= document.getElementById("ad01");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+if (six.style.display= "block"&&(ad.style.display ="none")){
+    six.style.display ="none";
+    ad.style.display= "block";
+    w.style.display="none";
+    c.style.display="none";
    }
 }
    
