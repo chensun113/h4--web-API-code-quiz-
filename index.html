@@ -19,7 +19,7 @@
 .main{
     text-align:center;
 }
-.main002,.main003,.main004,.main005,.main006,.ad001{
+.main002,.main003,.main004,.main005,.main006,.ad001,.high{
  max-width: 680px;
   margin: auto;
   background: white;
@@ -54,11 +54,11 @@ button{
 <br>
 <br>
 <div class ="main" id ="main01">
-    <h1>Coding Quiz Challenge</h1>
-    <p id="center">Try to answer the following code-related question within the time
-    <br>limit. Keep in mind that incorrect answers will penalize your scoretime
-  <br> by $ seconds!
-  <div>
+<h1>Coding Quiz Challenge</h1>
+<p id="center">Try to answer the following code-related question within the time
+<br>limit. Keep in mind that incorrect answers will penalize your scoretime
+<br> by $ seconds!
+<div>
   <button onclick="start()" >Start Quiz</button>
   </div>
   </p>
@@ -105,6 +105,14 @@ button{
     <p><button onclick ="six01()" >4.console log</button></p>
 </div>
 
+
+<div class ="ad001" id = "ad01">
+    <h1>All Done!</h1>
+    <p>Your final score is </p>
+    <P>Enter initials: <input type ="text" id ="in" >                       </p>
+    <p><button onclick ="submit()">Submit</button></p>
+</div>
+
 <div class ="correct" id ="correct">
 <hr>
 <p>Correct!</p>
@@ -114,26 +122,28 @@ button{
 <p>Wrong!</p>
 </div>
 
+<div class ="high" id ="high01">
+<h1>Highscores</h1>
+<p class="purple" id ="p"style ="width: 680px; height:20px; background-color:#ccccff;"></p>
+<p><button onclick ="back()">Go Back</button>
+    <button class ="btn1" onclick ="clear()">Clear Highscores</button>
+</p>
 
-<div class ="ad001" id = "ad01">
-<h1>All Done!</h1>
 </div>
-
-
-
 
 <script>
 //the first page start quiz button;
 function start(){
 var begin =  document.getElementById("main01");
 var second = document.getElementById("main02");
-
+var count = document.getElementById("count");
 if (begin.style.display= "block"&&(second.style.display ="none")){
     begin.style.display ="none";
     second.style.display= "block";
 
     }
-//first question page
+
+
 }
 
 function second(){
@@ -255,7 +265,7 @@ var c = document.getElementById("correct");
 if (six.style.display= "block"&&(ad.style.display ="none")){
     six.style.display ="none";
     ad.style.display= "block";
-    w.style.display="none";
+    w.style.display="block";
     c.style.display="none";
    }
 }
@@ -269,10 +279,41 @@ if (six.style.display= "block"&&(ad.style.display ="none")){
     six.style.display ="none";
     ad.style.display= "block";
     w.style.display="none";
+    c.style.display="block";
+   }
+}
+
+function submit(){
+var x = document.getElementById("in").value;
+var high = document.getElementById("high01");
+var ad= document.getElementById("ad01");
+var w = document.getElementById("worng");
+var c = document.getElementById("correct");
+var y = x.toUpperCase();
+
+if (ad.style.display= "block"&&(high.style.display ="none")){
+    ad.style.display ="none";
+    high.style.display= "block";
+    document.getElementById("p").innerHTML="1."+y;
+    w.style.display="none";
     c.style.display="none";
    }
 }
-   
+
+function back(){
+var high = document.getElementById("high01");
+var begin =  document.getElementById("main01");
+if (high.style.display ="block"&&(begin.style.display="none")){
+    high.style.display ="none";
+    begin.style.display ="block";
+}
+}
+
+function clear(){
+  
+
+
+   }
    
    
 
