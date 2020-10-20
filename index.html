@@ -48,7 +48,7 @@ button{
 
 
 <div class ="top01">View Highscores </div>
-<div class ="top02" >Timer: <span id="ccount">0 </span></div>
+<div class ="top02" >Timer: <span id="ccount">75</span></div>
 <br>
 <br>
 <br>
@@ -136,16 +136,25 @@ button{
 function start(){
 var begin =  document.getElementById("main01");
 var second = document.getElementById("main02");
-var count =document.getElementById("ccount");
+
 if (begin.style.display= "block"&&(second.style.display ="none")){
     begin.style.display ="none";
     second.style.display= "block";
 
     }
-var i;
-for (i=75;i>=0;i--){
-  document.getElementById("ccount").innerHTML=i;
-  }
+var i =75;
+var cc= document.getElementById("ccount");
+function start() {
+    i-=1;
+    cc.innerText=i;
+}var no = setInterval(start,1000);
+
+  
+    
+  
+  
+  
+  
 }
 
 
