@@ -48,7 +48,7 @@ button{
 
 
 <div class ="top01">View Highscores </div>
-<div class ="top02" >Timer: <span id="ccount">75</span></div>
+<div class ="top02" >Timer: <span id="ccount">0</span></div>
 <br>
 <br>
 <br>
@@ -59,7 +59,7 @@ button{
 <br>limit. Keep in mind that incorrect answers will penalize your scoretime
 <br> by $ seconds!
 <div>
-  <button onclick="start()" >Start Quiz</button>
+  <button id = "ok" onclick="start()" >Start Quiz</button>
   </div>
   </p>
 </div>
@@ -109,7 +109,7 @@ button{
 <div class ="ad001" id = "ad01">
     <h1>All Done!</h1>
     <p>Your final score is </p>
-    <p>Enter initials: <input type ="text" id ="in" >   <button onclick ="submit()">Submit</button>                    </p>
+    <p>Enter initials: <input type ="text" id ="in" >   <button id ="sub"onclick ="submit()">Submit</button>                    </p>
   
 </div>
 
@@ -133,7 +133,28 @@ button{
 
 <script>
 //the first page start quiz button;
+var countt = 75;
+var stopp = document.querySelector("#sub");//stop button
+var ok = document.querySelector("#ok");//start
+var countEl = document.querySelector("#ccount");//75;
+
+	
+function setCounterText() {
+function start01() {
+    countt-=1;
+    countEl.textContent = countt;
+    return countt;
+}var no = setInterval(start01,1000);
+   //stop;
+  stopp.addEventListener("click", function() {
+
+    clearInterval(no);
+    
+  });
+}
+
 function start(){
+    setCounterText();
 var begin =  document.getElementById("main01");
 var second = document.getElementById("main02");
 
@@ -142,20 +163,11 @@ if (begin.style.display= "block"&&(second.style.display ="none")){
     second.style.display= "block";
 
     }
-var i =75;
-var cc= document.getElementById("ccount");
-function start01() {
-    i-=1;
-    cc.innerText=i;
-}var no = setInterval(start01,1000);
 
-  
-    
-  
-  
-  
-  
-}
+
+};
+
+
 
 
 
@@ -304,14 +316,20 @@ var w = document.getElementById("worng");
 var c = document.getElementById("correct");
 var y = x.toUpperCase();
 
+
 if (ad.style.display= "block"&&(high.style.display ="none")){
     ad.style.display ="none";
     high.style.display= "block";
-    document.getElementById("p").innerHTML="1."+y;
+    document.getElementById("p").innerHTML="1."+y+" "+countt;
     w.style.display="none";
     c.style.display="none";
    }
+   
+
+  
+
 }
+
 
 function back(){
 var high = document.getElementById("high01");
